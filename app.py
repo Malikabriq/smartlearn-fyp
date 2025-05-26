@@ -19,7 +19,14 @@ import wikipedia
 def load_models():
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
     masker = pipeline("fill-mask", model="roberta-large")
+    import spacy
+
     nlp = spacy.load("en_core_web_sm")
+except:
+    import os
+    os.system("python -m spacy download en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
     return summarizer, masker, nlp
 
 summarizer, masker, nlp = load_models()
