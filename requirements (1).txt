@@ -1,0 +1,7 @@
+streamlit
+transformers
+torch
+spacy
+wikipedia
+docx2txt
+PyPDF2
