@@ -20,6 +20,7 @@ def load_models():
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
     masker = pipeline("fill-mask", model="roberta-large")
     import spacy
+    try:
 
     nlp = spacy.load("en_core_web_sm")
 except:
